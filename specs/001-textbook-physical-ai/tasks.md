@@ -8,11 +8,11 @@
 
 ## Phase 1: Project Setup and Initialization
 
-- [ ] [T001] Initialize Docusaurus project with required dependencies for textbook
-- [ ] [T002] Configure docusaurus.config.js with textbook structure and navigation
-- [ ] [T003] Set up sidebars.js with module and chapter organization
-- [ ] [T004] Configure package.json with build and validation scripts
-- [ ] [T005] [P] Create basic directory structure for modules (docs/, static/, etc.)
+- [X] [T001] Initialize Docusaurus project with required dependencies for textbook
+- [X] [T002] Configure docusaurus.config.js with textbook structure and navigation
+- [X] [T003] Set up sidebars.js with module and chapter organization
+- [X] [T004] Configure package.json with build and validation scripts
+- [X] [T005] [P] Create basic directory structure for modules (docs/, static/, etc.)
 
 ## Phase 2: Foundational Content Structure
 
