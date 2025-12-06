@@ -1,33 +1,32 @@
-# Dependencies
+# Docusaurus / Node.js
 node_modules/
-
-# Build output
-build/
-dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
 .next/
 .nuxt/
-out/
-
-# Environment variables
-.env*
-!.env.example
-
-# Logs
-*.log
-
-# Runtime data
-pids/
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage directory used by tools like istanbul
-coverage/
+dist/
+build/
 .nyc_output/
+coverage/
+*.log
+.env*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.output/
+archiver/
+packed/
+.DS_Store
+Thumbs.db
 
-# Temporary folders
-tmp/
-temp/
+# Docusaurus build output
+build/
+.docusaurus/
+.temp/
 
 # OS generated files
 .DS_Store
@@ -38,16 +37,63 @@ temp/
 ehthumbs.db
 Thumbs.db
 
+# Python (if needed for scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV
+.venv
+env.bak
+venv.bak
+
 # Editor files
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
-# Docusaurus-specific
-.docusaurus/
-.cache/
+# Environment specific files
+.env
+.env.local
+.env.dev
+.env.prod
 
-# Sensitive files
-secrets/
-credentials.json
+# Testing
+coverage/
+.nyc_output/
+.jest/
+
+# CI/CD
+.github/
+.semaphore/
+
+# Backup files
+*.bak
+*.tmp
+*.old
+
+# ROS specific (for examples)
+*.pyc
+*.pyo
+*.o
+*.a
+*.so
+.libs/
+.deps/
+
+# ROS logs
+.rostime
+log/
+*.log
+
+# Simulation files
+*.dae
+*.stl
+*.obj
+*.fbx
+*.blend
