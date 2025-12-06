@@ -1,7 +1,7 @@
 ---
 id: chapter-04-04-capstone-project
-title: "Chapter 4.4: Capstone Project"
-sidebar_label: "4.4 Capstone Project"
+title: "Chapter 4: Capstone Project"
+sidebar_label: "Chapter 4: Capstone Project"
 sidebar_position: 4
 description: "Complete capstone project integrating all VLA concepts: building a full humanoid VLA system with Isaac Sim, ROS 2, and real-world deployment considerations."
 keywords: [VLA capstone, humanoid system, Isaac Sim, ROS 2, deployment, integration, project]
@@ -15,7 +15,7 @@ prerequisites:
 ---
 
 
-# Chapter 4.4: Capstone Project
+# Chapter 4 - Capstone Project
 
 ## Learning Objectives
 

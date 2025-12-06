@@ -1,8 +1,8 @@
 ---
 id: chapter-01-05-launch-files
-title: Launch Files - Coordinating Complex Robot Systems
-sidebar_label: Launch Files - Coordinating Complex Robot Systems
-description: Understanding the structure and syntax of ROS 2 launch files for multi-node robot systems
+title: "Launch Files - Coordinating Complex Robot Systems"
+sidebar_label: "Chapter 5: Launch Files - Coordinating Complex Robot Systems"
+description: "Understanding the structure and syntax of ROS 2 launch files for multi-node robot systems"
 keywords:
   - ROS 2
   - Launch Files
@@ -15,7 +15,7 @@ prerequisites:
 ---
 
 
-# Launch Files - Coordinating Complex Robot Systems
+# Chapter 5 - Launch Files - Coordinating Complex Robot Systems
 
 ## Learning Objectives
 

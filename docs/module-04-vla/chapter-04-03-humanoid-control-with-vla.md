@@ -1,7 +1,7 @@
 ---
 id: chapter-04-03-humanoid-control-with-vla
-title: "Chapter 4.3: Humanoid Control with VLA"
-sidebar_label: "4.3 Humanoid Control with VLA"
+title: "Chapter 3: Humanoid Control with VLA"
+sidebar_label: "Chapter 3: Humanoid Control with VLA"
 sidebar_position: 3
 description: "Advanced VLA implementations for humanoid robots: whole-body control, balance-aware systems, manipulation-locomotion coordination, and humanoid-specific challenges."
 keywords: [VLA, humanoid control, whole-body control, balance, bipedal locomotion, manipulation, ROS 2, Isaac Sim]
@@ -14,7 +14,7 @@ prerequisites:
 ---
 
 
-# Chapter 4.3: Humanoid Control with VLA
+# Chapter 3 - Humanoid Control with VLA
 
 ## Learning Objectives
 

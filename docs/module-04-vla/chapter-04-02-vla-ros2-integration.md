@@ -1,7 +1,7 @@
 ---
 id: chapter-04-02-vla-ros2-integration
-title: "Chapter 4.2: VLA-ROS2 Integration"
-sidebar_label: "4.2 VLA-ROS2 Integration"
+title: "Chapter 2: VLA-ROS2 Integration"
+sidebar_label: "Chapter 2: VLA-ROS2 Integration"
 sidebar_position: 2
 description: "Integrate Vision-Language-Action models with ROS 2: multimodal action servers, distributed inference, and real-time communication patterns for humanoid robotics."
 keywords: [VLA, ROS 2, multimodal AI, action servers, distributed inference, humanoid control, message passing]
@@ -13,7 +13,7 @@ prerequisites:
 ---
 
 
-# Chapter 4.2: VLA-ROS2 Integration
+# Chapter 2 - VLA-ROS2 Integration
 
 ## Learning Objectives
 

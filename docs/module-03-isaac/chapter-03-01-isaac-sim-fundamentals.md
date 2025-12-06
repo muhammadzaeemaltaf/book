@@ -1,8 +1,8 @@
 ---
 id: chapter-03-01-isaac-sim-fundamentals
-title: Isaac Sim Fundamentals
-sidebar_label: Isaac Sim Fundamentals
-description: Understanding NVIDIA Isaac Sim architecture and capabilities for robotic simulation
+title: "Isaac Sim Fundamentals"
+sidebar_label: "Chapter 1: Isaac Sim Fundamentals"
+description: "Understanding NVIDIA Isaac Sim architecture and capabilities for robotic simulation"
 keywords:
   - Isaac Sim
   - NVIDIA
@@ -15,7 +15,7 @@ prerequisites:
 ---
 
 
-# NVIDIA Isaac Sim Fundamentals and Setup
+# Chapter 1 - Isaac Sim Fundamentals
 
 ## Learning Objectives
 

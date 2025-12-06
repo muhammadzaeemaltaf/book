@@ -17,78 +17,80 @@ export default function BreadcrumbNavigation({ items = [] }) {
     return null;
   }
 
-  return (
-    <nav className="breadcrumb-navigation" aria-label="Breadcrumb">
-      <ol className="breadcrumb-navigation__list">
-        <li className="breadcrumb-navigation__item">
-          <Link to="/" className="breadcrumb-navigation__link">
-            Home
-          </Link>
-        </li>
-        {items.map((item, index) => (
-          <li key={index} className="breadcrumb-navigation__separator">
-            <span aria-hidden="true">›</span>
-          </li>
-        ))}
-        {items.map((item, index) => (
-          <li key={`item-${index}`} className="breadcrumb-navigation__item">
-            {item.url ? (
-              <Link to={item.url} className="breadcrumb-navigation__link">
-                {item.title}
-              </Link>
-            ) : (
-              <span className="breadcrumb-navigation__current">
-                {item.title}
-              </span>
-            )}
-          </li>
-        ))}
-      </ol>
+  return null;
 
-      <style jsx>{`
-        .breadcrumb-navigation {
-          margin: 1rem 0;
-          padding: 0.75rem 0;
-        }
+  // return (
+  //   <nav className="breadcrumb-navigation" aria-label="Breadcrumb">
+  //     <ol className="breadcrumb-navigation__list">
+  //       <li className="breadcrumb-navigation__item">
+  //         <Link to="/" className="breadcrumb-navigation__link">
+  //           Home
+  //         </Link>
+  //       </li>
+  //       {items.map((item, index) => (
+  //         <li key={index} className="breadcrumb-navigation__separator">
+  //           <span aria-hidden="true">›</span>
+  //         </li>
+  //       ))}
+  //       {items.map((item, index) => (
+  //         <li key={`item-${index}`} className="breadcrumb-navigation__item">
+  //           {item.url ? (
+  //             <Link to={item.url} className="breadcrumb-navigation__link">
+  //               {item.title}
+  //             </Link>
+  //           ) : (
+  //             <span className="breadcrumb-navigation__current">
+  //               {item.title}
+  //             </span>
+  //           )}
+  //         </li>
+  //       ))}
+  //     </ol>
 
-        .breadcrumb-navigation__list {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          list-style: none;
-          margin: 0;
-          padding: 0;
-        }
+  //     <style jsx>{`
+  //       .breadcrumb-navigation {
+  //         margin: 1rem 0;
+  //         padding: 0.75rem 0;
+  //       }
 
-        .breadcrumb-navigation__item {
-          display: inline-block;
-        }
+  //       .breadcrumb-navigation__list {
+  //         display: flex;
+  //         flex-wrap: wrap;
+  //         align-items: center;
+  //         list-style: none;
+  //         margin: 0;
+  //         padding: 0;
+  //       }
 
-        .breadcrumb-navigation__item:last-child .breadcrumb-navigation__current {
-          color: #6b7280;
-          font-weight: 500;
-        }
+  //       .breadcrumb-navigation__item {
+  //         display: inline-block;
+  //       }
 
-        .breadcrumb-navigation__link {
-          color: #374151;
-          text-decoration: none;
-          font-size: 0.875rem;
-        }
+  //       .breadcrumb-navigation__item:last-child .breadcrumb-navigation__current {
+  //         color: #6b7280;
+  //         font-weight: 500;
+  //       }
 
-        .breadcrumb-navigation__link:hover {
-          text-decoration: underline;
-        }
+  //       .breadcrumb-navigation__link {
+  //         color: #374151;
+  //         text-decoration: none;
+  //         font-size: 0.875rem;
+  //       }
 
-        .breadcrumb-navigation__current {
-          color: #6b7280;
-          font-size: 0.875rem;
-        }
+  //       .breadcrumb-navigation__link:hover {
+  //         text-decoration: underline;
+  //       }
 
-        .breadcrumb-navigation__separator {
-          margin: 0 0.5rem;
-          color: #9ca3af;
-        }
-      `}</style>
-    </nav>
-  );
+  //       .breadcrumb-navigation__current {
+  //         color: #6b7280;
+  //         font-size: 0.875rem;
+  //       }
+
+  //       .breadcrumb-navigation__separator {
+  //         margin: 0 0.5rem;
+  //         color: #9ca3af;
+  //       }
+  //     `}</style>
+  //   </nav>
+  // );
 }

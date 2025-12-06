@@ -1,7 +1,7 @@
 ---
 id: chapter-04-01-vla-fundamentals
-title: "Chapter 4.1: VLA Fundamentals"
-sidebar_label: "4.1 VLA Fundamentals"
+title: "VLA Fundamentals"
+sidebar_label: "Chapter 1: VLA Fundamentals"
 sidebar_position: 1
 description: "Explore Vision-Language-Action (VLA) models for humanoid robotics: multimodal architectures, embodied language models, and integration with physical AI systems."
 keywords: [VLA, vision-language-action, multimodal AI, embodied language models, humanoid control, OpenVLA, RT-1, RT-2]
@@ -11,7 +11,7 @@ prerequisites:
   - chapter-03-01-isaac-sim-fundamentals
 ---
 
-# Chapter 4.1: VLA Fundamentals
+# Chapter 1 - VLA Fundamentals
 
 ## Learning Objectives
 

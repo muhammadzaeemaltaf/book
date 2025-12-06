@@ -1,7 +1,7 @@
 ---
 id: chapter-01-01-architecture
 title: ROS 2 Architecture & Core Concepts
-sidebar_label: ROS 2 Architecture & Core Concepts
+sidebar_label: "Chapter 1: ROS 2 Architecture & Core Concepts"
 description: Understanding the fundamental architecture of ROS 2 and its key components
 keywords:
   - ROS 2
@@ -13,7 +13,7 @@ prerequisites: []
 ---
 
 
-# ROS 2 Architecture & Core Concepts
+# Chapter 1 - ROS 2 Architecture & Core Concepts
 
 ## Learning Objectives
 

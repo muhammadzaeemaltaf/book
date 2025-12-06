@@ -1,8 +1,8 @@
 ---
 id: chapter-01-03-workspaces-packages
-title: Workspaces and Packages
-sidebar_label: Workspaces and Packages
-description: Creating and managing ROS 2 workspaces and packages for project organization
+title: "Workspaces and Packages"
+sidebar_label: "Chapter 3: Workspaces and Packages"
+description: "Creating and managing ROS 2 workspaces and packages for project organization"
 keywords:
   - ROS 2
   - Workspaces
@@ -15,7 +15,7 @@ prerequisites:
 ---
 
 
-# Building ROS 2 Packages and Workspaces
+# Chapter 3 - Workspaces and Packages
 
 ## Learning Objectives
 
