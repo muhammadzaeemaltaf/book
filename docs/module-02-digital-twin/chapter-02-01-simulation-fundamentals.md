@@ -1,6 +1,18 @@
 ---
-sidebar_position: 1
+id: chapter-02-01-simulation-fundamentals
+title: Simulation Fundamentals
+sidebar_label: Simulation Fundamentals
+description: Understanding the core principles of physics simulation in robotics and digital twins
+keywords:
+  - Simulation
+  - Digital Twin
+  - Physics
+  - Robotics
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
 ---
+
 
 # Physics Simulation Fundamentals
 
@@ -684,3 +696,14 @@ Expected results: The simulation should show physics interactions between the ro
 3. How do you create a URDF model for a simple robot?
 4. What are the key components of a Gazebo simulation environment?
 5. How do you integrate ROS 2 with Gazebo for robot simulation?
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-01-ros2/chapter-01-05-launch-files',
+    title: '1.5 Launch Files - Coordinating Complex Robot Systems'
+  }}
+  next={{
+    permalink: '/docs/module-02-digital-twin/chapter-02-02-gazebo-basics',
+    title: '2.2 Gazebo Basics'
+  }}
+/>

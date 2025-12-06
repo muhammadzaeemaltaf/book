@@ -5,6 +5,10 @@ sidebar_label: "1.4 URDF & Robot Description"
 sidebar_position: 4
 description: "Master URDF (Unified Robot Description Format) for humanoid robots, including joint definitions, kinematics, collision models, and ROS 2 integration."
 keywords: [URDF, robot description, humanoid kinematics, ROS 2, xacro, robot_state_publisher]
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
+  - chapter-01-03-workspaces-packages
 ---
 
 # Chapter 1.4: URDF and Robot Description
@@ -1393,5 +1397,16 @@ In **Chapter 2.1: Simulation Fundamentals**, you'll learn:
 - [Pepper Robot URDF](https://github.com/ros-naoqi/pepper_robot)
 
 ---
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-01-ros2/chapter-01-03-workspaces-packages',
+    title: '1.3 Workspaces and Packages'
+  }}
+  next={{
+    permalink: '/docs/module-01-ros2/chapter-01-05-launch-files',
+    title: '1.5 Launch Files - Coordinating Complex Robot Systems'
+  }}
+/>
 
 **End of Chapter 1.4: URDF and Robot Description**

@@ -1,6 +1,16 @@
 ---
-sidebar_position: 1
+id: intro-index
+title: "Introduction to Physical AI & Humanoid Robotics"
+sidebar_label: "Introduction Index"
+description: "Welcome to the comprehensive textbook on Physical AI and Humanoid Robotics"
+keywords:
+  - Physical AI
+  - Humanoid Robotics
+  - Introduction
+  - Textbook Overview
+prerequisites: []
 ---
+
 
 # Introduction to Physical AI & Humanoid Robotics
 

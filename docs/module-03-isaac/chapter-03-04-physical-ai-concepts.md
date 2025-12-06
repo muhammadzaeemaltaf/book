@@ -5,6 +5,13 @@ sidebar_label: "3.4 Physical AI Concepts"
 sidebar_position: 4
 description: "Explore Physical AI foundations: embodied intelligence, sensor-motor integration, world models, sim-to-real transfer, and NVIDIA's Physical AI platform for humanoid robotics."
 keywords: [Physical AI, embodied AI, world models, sim-to-real, NVIDIA Omniverse, Isaac platform, humanoid robotics]
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
+  - chapter-02-01-simulation-fundamentals
+  - chapter-03-01-isaac-sim-fundamentals
+  - chapter-03-02-isaac-ros-bridge
+  - chapter-03-03-robot-control-with-isaac
 ---
 
 # Chapter 3.4: Physical AI Concepts
@@ -49,7 +56,7 @@ By the end of this chapter, you will be able to:
 | **Interaction** | Keyboard/mouse input | Sensor-motor loops |
 | **Consequences** | Virtual errors | Physical safety risks |
 | **Training** | Datasets, simulations | Sim-to-real, real-world data |
-| **Latency** | Flexible | Real-time constraints (<10ms) |
+| **Latency** | Flexible | Real-time constraints (&lt;10ms) |
 | **Embodiment** | None | Robot body, sensors, actuators |
 
 ### The Physical AI Stack
@@ -1458,5 +1465,16 @@ In **Chapter 4.1: VLA Fundamentals**, you'll learn:
 - [Physical AI Discord](https://discord.gg/physical-ai)
 
 ---
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-03-isaac/chapter-03-03-robot-control-with-isaac',
+    title: '3.3 Robot Control with Isaac'
+  }}
+  next={{
+    permalink: '/docs/module-04-vla/chapter-04-01-vla-fundamentals',
+    title: '4.1 VLA Fundamentals'
+  }}
+/>
 
 **End of Chapter 3.4: Physical AI Concepts**

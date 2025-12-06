@@ -1,6 +1,19 @@
 ---
-sidebar_position: 2
+id: chapter-01-02-nodes-topics-services
+title: Nodes, Topics, Services and Actions
+sidebar_label: Nodes, Topics, Services and Actions
+description: Understanding ROS 2 communication patterns including nodes, topics, services, and actions
+keywords:
+  - ROS 2
+  - Nodes
+  - Topics
+  - Services
+  - Actions
+  - Communication
+prerequisites:
+  - chapter-01-01-architecture
 ---
+
 
 # Nodes, Topics, and Services in Depth
 
@@ -616,3 +629,14 @@ Expected results: The system demonstrates all communication patterns working tog
 3. How do you handle multiple subscriptions in a single node?
 4. What are the advantages of using services over topics for certain operations?
 5. How would you design a ROS 2 system with multiple publishers and subscribers?
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-01-ros2/chapter-01-01-architecture',
+    title: '1.1 ROS 2 Architecture & Core Concepts'
+  }}
+  next={{
+    permalink: '/docs/module-01-ros2/chapter-01-03-workspaces-packages',
+    title: '1.3 Workspaces and Packages'
+  }}
+/>

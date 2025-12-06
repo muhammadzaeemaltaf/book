@@ -5,6 +5,10 @@ sidebar_label: "4.1 VLA Fundamentals"
 sidebar_position: 1
 description: "Explore Vision-Language-Action (VLA) models for humanoid robotics: multimodal architectures, embodied language models, and integration with physical AI systems."
 keywords: [VLA, vision-language-action, multimodal AI, embodied language models, humanoid control, OpenVLA, RT-1, RT-2]
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
+  - chapter-03-01-isaac-sim-fundamentals
 ---
 
 # Chapter 4.1: VLA Fundamentals
@@ -1489,5 +1493,16 @@ In **Chapter 4.2: VLA-ROS2 Integration**, you'll learn:
 - [JacoPilot](https://github.com/utiasSTARS/jacopilot) - Quadrotor control with language
 
 ---
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-03-isaac/chapter-03-04-physical-ai-concepts',
+    title: '3.4 Physical AI Concepts'
+  }}
+  next={{
+    permalink: '/docs/module-04-vla/chapter-04-02-vla-ros2-integration',
+    title: '4.2 VLA-ROS2 Integration'
+  }}
+/>
 
 **End of Chapter 4.1: VLA Fundamentals**

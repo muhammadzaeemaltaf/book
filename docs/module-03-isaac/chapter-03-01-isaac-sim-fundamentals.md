@@ -1,6 +1,19 @@
 ---
-sidebar_position: 3
+id: chapter-03-01-isaac-sim-fundamentals
+title: Isaac Sim Fundamentals
+sidebar_label: Isaac Sim Fundamentals
+description: Understanding NVIDIA Isaac Sim architecture and capabilities for robotic simulation
+keywords:
+  - Isaac Sim
+  - NVIDIA
+  - Simulation
+  - Robotics
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
+  - chapter-02-01-simulation-fundamentals
 ---
+
 
 # NVIDIA Isaac Sim Fundamentals and Setup
 
@@ -1160,3 +1173,14 @@ source install/setup.bash
 3. What types of synthetic data can Isaac Sim generate?
 4. When would you choose Isaac Sim over Gazebo for a project?
 5. How does Isaac Sim integrate with the ROS ecosystem?
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-02-digital-twin/chapter-02-04-sim-physical-connection',
+    title: '2.4 Simulation-Physical Connection'
+  }}
+  next={{
+    permalink: '/docs/module-03-isaac/chapter-03-02-isaac-ros-bridge',
+    title: '3.2 Isaac ROS Bridge'
+  }}
+/>

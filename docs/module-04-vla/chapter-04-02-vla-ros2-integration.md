@@ -5,7 +5,13 @@ sidebar_label: "4.2 VLA-ROS2 Integration"
 sidebar_position: 2
 description: "Integrate Vision-Language-Action models with ROS 2: multimodal action servers, distributed inference, and real-time communication patterns for humanoid robotics."
 keywords: [VLA, ROS 2, multimodal AI, action servers, distributed inference, humanoid control, message passing]
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
+  - chapter-03-01-isaac-sim-fundamentals
+  - chapter-04-01-vla-fundamentals
 ---
+
 
 # Chapter 4.2: VLA-ROS2 Integration
 
@@ -2060,5 +2066,16 @@ In **Chapter 4.3: Humanoid Control with VLA**, you'll learn:
 - [Multimodal Robotics with Deep Learning](https://arxiv.org/abs/2402.15508)
 
 ---
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-04-vla/chapter-04-01-vla-fundamentals',
+    title: '4.1 VLA Fundamentals'
+  }}
+  next={{
+    permalink: '/docs/module-04-vla/chapter-04-03-humanoid-control-with-vla',
+    title: '4.3 Humanoid Control with VLA'
+  }}
+/>
 
 **End of Chapter 4.2: VLA-ROS2 Integration**
