@@ -49,6 +49,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/muhammadzaeemaltaf/book/tree/main/',
+          breadcrumbs: true,  // Enable breadcrumbs
         },
         blog: false, // Disable blog for textbook
         theme: {

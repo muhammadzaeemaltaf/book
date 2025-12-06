@@ -1,6 +1,19 @@
 ---
-sidebar_position: 3
+id: chapter-01-03-workspaces-packages
+title: Workspaces and Packages
+sidebar_label: Workspaces and Packages
+description: Creating and managing ROS 2 workspaces and packages for project organization
+keywords:
+  - ROS 2
+  - Workspaces
+  - Packages
+  - Project Structure
+  - Build System
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
 ---
+
 
 # Building ROS 2 Packages and Workspaces
 
@@ -801,3 +814,14 @@ Expected results: The system should start with all nodes communicating properly,
 3. What is the purpose of the colcon build system?
 4. How do you create and use launch files to coordinate multiple nodes?
 5. What are the advantages of using packages over standalone nodes?
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-01-ros2/chapter-01-02-nodes-topics-services',
+    title: '1.2 Nodes, Topics, Services and Actions'
+  }}
+  next={{
+    permalink: '/docs/module-01-ros2/chapter-01-04-urdf-robot-description',
+    title: '1.4 URDF & Robot Description'
+  }}
+/>

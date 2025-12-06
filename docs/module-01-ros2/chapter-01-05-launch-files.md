@@ -1,6 +1,19 @@
 ---
-sidebar_position: 4
+id: chapter-01-05-launch-files
+title: Launch Files - Coordinating Complex Robot Systems
+sidebar_label: Launch Files - Coordinating Complex Robot Systems
+description: Understanding the structure and syntax of ROS 2 launch files for multi-node robot systems
+keywords:
+  - ROS 2
+  - Launch Files
+  - System Coordination
+  - Multi-node Systems
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
+  - chapter-01-03-workspaces-packages
 ---
+
 
 # Launch Files - Coordinating Complex Robot Systems
 
@@ -1030,3 +1043,14 @@ Expected results: The system should start 2 robots with proper namespacing, even
 3. What is the purpose of namespaces in multi-robot systems?
 4. How do event handlers improve system reliability in launch files?
 5. What are the advantages of using launch files over manual node startup?
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-01-ros2/chapter-01-04-urdf-robot-description',
+    title: '1.4 URDF & Robot Description'
+  }}
+  next={{
+    permalink: '/docs/module-02-digital-twin/chapter-02-01-simulation-fundamentals',
+    title: '2.1 Simulation Fundamentals'
+  }}
+/>

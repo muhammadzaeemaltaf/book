@@ -1,6 +1,21 @@
 ---
-sidebar_position: 1
+id: intro
+title: Introduction to Physical AI & Humanoid Robotics
+sidebar_label: Introduction
+description: Introduction to Physical AI and its applications in humanoid robotics
+keywords:
+  - Physical AI
+  - Humanoid Robotics
+  - Introduction
+  - Overview
+prerequisites: []
 ---
+
+<BreadcrumbNavigation
+  items={[
+    { title: 'Textbook', url: '/docs/intro' }
+  ]}
+/>
 
 # Introduction to Physical AI & Humanoid Robotics
 

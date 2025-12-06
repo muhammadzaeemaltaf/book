@@ -5,7 +5,14 @@ sidebar_label: "4.3 Humanoid Control with VLA"
 sidebar_position: 3
 description: "Advanced VLA implementations for humanoid robots: whole-body control, balance-aware systems, manipulation-locomotion coordination, and humanoid-specific challenges."
 keywords: [VLA, humanoid control, whole-body control, balance, bipedal locomotion, manipulation, ROS 2, Isaac Sim]
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
+  - chapter-03-01-isaac-sim-fundamentals
+  - chapter-04-01-vla-fundamentals
+  - chapter-04-02-vla-ros2-integration
 ---
+
 
 # Chapter 4.3: Humanoid Control with VLA
 
@@ -1950,5 +1957,16 @@ In **Chapter 4.4: Capstone Project**, you'll learn:
 - [PyBullet for Robotics](https://pybullet.org/) - Physics simulation
 
 ---
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-04-vla/chapter-04-02-vla-ros2-integration',
+    title: '4.2 VLA-ROS2 Integration'
+  }}
+  next={{
+    permalink: '/docs/module-04-vla/chapter-04-04-capstone-project',
+    title: '4.4 Capstone Project'
+  }}
+/>
 
 **End of Chapter 4.3: Humanoid Control with VLA**

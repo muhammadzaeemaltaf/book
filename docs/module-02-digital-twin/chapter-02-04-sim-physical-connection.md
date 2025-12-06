@@ -1,6 +1,20 @@
 ---
-sidebar_position: 4
+id: chapter-02-04-sim-physical-connection
+title: Simulation-Physical Connection
+sidebar_label: Simulation-Physical Connection
+description: Understanding the relationship between simulated and physical robotic systems
+keywords:
+  - Simulation
+  - Physical Systems
+  - Validation
+  - Accuracy
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
+  - chapter-02-01-simulation-fundamentals
+  - chapter-02-02-gazebo-basics
 ---
+
 
 # Connecting Simulation to Physical Reality
 
@@ -1393,3 +1407,14 @@ Expected results: The validation scenario should execute a comprehensive test co
 3. What is domain randomization and how does it help with sim-to-real transfer?
 4. What are the key parameters that need calibration for accurate simulation?
 5. How would you design an experiment to validate simulation-to-reality transfer?
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-02-digital-twin/chapter-02-03-unity-visualization',
+    title: '2.3 Unity Visualization'
+  }}
+  next={{
+    permalink: '/docs/module-03-isaac/chapter-03-01-isaac-sim-fundamentals',
+    title: '3.1 Isaac Sim Fundamentals'
+  }}
+/>

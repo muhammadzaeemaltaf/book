@@ -5,7 +5,15 @@ sidebar_label: "4.4 Capstone Project"
 sidebar_position: 4
 description: "Complete capstone project integrating all VLA concepts: building a full humanoid VLA system with Isaac Sim, ROS 2, and real-world deployment considerations."
 keywords: [VLA capstone, humanoid system, Isaac Sim, ROS 2, deployment, integration, project]
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
+  - chapter-03-01-isaac-sim-fundamentals
+  - chapter-04-01-vla-fundamentals
+  - chapter-04-02-vla-ros2-integration
+  - chapter-04-03-humanoid-control-with-vla
 ---
+
 
 # Chapter 4.4: Capstone Project
 
@@ -2567,6 +2575,14 @@ Congratulations! You have completed Module 4 and the entire Physical AI & Humano
 - [AI and Robotics Conferences](https://icra2024.org/)
 
 ---
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-04-vla/chapter-04-03-humanoid-control-with-vla',
+    title: '4.3 Humanoid Control with VLA'
+  }}
+  next={null}
+/>
 
 **End of Chapter 4.4: Capstone Project**
 **End of Module 4: Vision-Language-Action Systems**

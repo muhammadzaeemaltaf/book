@@ -1,6 +1,20 @@
 ---
-sidebar_position: 2
+id: chapter-03-02-isaac-ros-bridge
+title: Isaac ROS Bridge
+sidebar_label: Isaac ROS Bridge
+description: Understanding Isaac ROS framework and hardware-accelerated perception
+keywords:
+  - Isaac ROS
+  - Hardware Acceleration
+  - Perception
+  - NVIDIA
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
+  - chapter-02-01-simulation-fundamentals
+  - chapter-03-01-isaac-sim-fundamentals
 ---
+
 
 # Isaac ROS Bridge: Hardware Acceleration for Perception
 
@@ -791,8 +805,14 @@ def generate_launch_description():
         perception_pipeline,
         # stereo_rectification,  # Uncomment when actual Isaac ROS packages are available
     ])
-```
 
-### Step 6: Create the Third Isaac Chapter
-
-Now I need to create the third chapter for Isaac module:
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-03-isaac/chapter-03-01-isaac-sim-fundamentals',
+    title: '3.1 Isaac Sim Fundamentals'
+  }}
+  next={{
+    permalink: '/docs/module-03-isaac/chapter-03-03-robot-control-with-isaac',
+    title: '3.3 Robot Control with Isaac'
+  }}
+/>

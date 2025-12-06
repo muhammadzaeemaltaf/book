@@ -1,6 +1,19 @@
 ---
-sidebar_position: 2
+id: chapter-02-02-gazebo-basics
+title: Gazebo Basics
+sidebar_label: Gazebo Basics
+description: Mastering Gazebo simulation environment setup and configuration for robot models
+keywords:
+  - Gazebo
+  - Simulation
+  - Physics
+  - Robot Models
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
+  - chapter-02-01-simulation-fundamentals
 ---
+
 
 # Physics Simulation with Gazebo
 
@@ -1393,3 +1406,14 @@ Expected results: The robot should navigate autonomously to the goal position wh
 3. How do you bridge Gazebo topics to ROS 2 topics?
 4. What are the differences between CPU and GPU-based sensors in Gazebo?
 5. How would you optimize a Gazebo simulation for better performance?
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-02-digital-twin/chapter-02-01-simulation-fundamentals',
+    title: '2.1 Simulation Fundamentals'
+  }}
+  next={{
+    permalink: '/docs/module-02-digital-twin/chapter-02-03-unity-visualization',
+    title: '2.3 Unity Visualization'
+  }}
+/>

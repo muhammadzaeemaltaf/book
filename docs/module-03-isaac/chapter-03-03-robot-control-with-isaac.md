@@ -1,6 +1,22 @@
 ---
-sidebar_position: 3
+id: chapter-03-03-robot-control-with-isaac
+title: Robot Control with Isaac
+sidebar_label: Robot Control with Isaac
+description: Implementing advanced navigation and manipulation using Isaac Sim and Nav2
+keywords:
+  - Isaac Sim
+  - Navigation
+  - Manipulation
+  - Nav2
+  - Path Planning
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
+  - chapter-02-01-simulation-fundamentals
+  - chapter-03-01-isaac-sim-fundamentals
+  - chapter-03-02-isaac-ros-bridge
 ---
+
 
 # Robot Control with Isaac: Advanced Navigation and Manipulation
 
@@ -1152,8 +1168,14 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
-```
 
-### Step 5: Create the Fourth Isaac Chapter
-
-Now I need to create the fourth chapter for Isaac module:
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-03-isaac/chapter-03-02-isaac-ros-bridge',
+    title: '3.2 Isaac ROS Bridge'
+  }}
+  next={{
+    permalink: '/docs/module-03-isaac/chapter-03-04-physical-ai-concepts',
+    title: '3.4 Physical AI Concepts'
+  }}
+/>

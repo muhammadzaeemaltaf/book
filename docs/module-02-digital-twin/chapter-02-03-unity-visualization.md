@@ -1,6 +1,19 @@
 ---
-sidebar_position: 3
+id: chapter-02-03-unity-visualization
+title: Unity Visualization
+sidebar_label: Unity Visualization
+description: Understanding Unity as a visualization platform for humanoid robots and integrating with ROS 2
+keywords:
+  - Unity
+  - Visualization
+  - ROS 2 Integration
+  - Humanoid Robots
+prerequisites:
+  - chapter-01-01-architecture
+  - chapter-01-02-nodes-topics-services
+  - chapter-02-01-simulation-fundamentals
 ---
+
 
 # Unity Visualization for Humanoid Robotics
 
@@ -760,3 +773,14 @@ Expected results: You should see the robot visualized in Unity, updating in real
 3. How do you synchronize robot joint states between ROS and Unity?
 4. What rendering pipeline should you choose for mobile deployment?
 5. How would you implement VR control for a humanoid robot in Unity?
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-02-digital-twin/chapter-02-02-gazebo-basics',
+    title: '2.2 Gazebo Basics'
+  }}
+  next={{
+    permalink: '/docs/module-02-digital-twin/chapter-02-04-sim-physical-connection',
+    title: '2.4 Simulation-Physical Connection'
+  }}
+/>

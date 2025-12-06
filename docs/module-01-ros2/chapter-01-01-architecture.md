@@ -1,6 +1,17 @@
 ---
-sidebar_position: 1
+id: chapter-01-01-architecture
+title: ROS 2 Architecture & Core Concepts
+sidebar_label: ROS 2 Architecture & Core Concepts
+description: Understanding the fundamental architecture of ROS 2 and its key components
+keywords:
+  - ROS 2
+  - Architecture
+  - Nodes
+  - Topics
+  - Services
+prerequisites: []
 ---
+
 
 # ROS 2 Architecture & Core Concepts
 
@@ -356,3 +367,14 @@ Expected results: The system should demonstrate nodes communicating via topics a
 3. When would you use a topic versus a service in ROS 2?
 4. What are Quality of Service (QoS) policies and why are they important?
 5. How do you create a ROS 2 workspace and what is its purpose?
+
+<ChapterNavigation
+  previous={{
+    permalink: '/docs/module-01-ros2/index',
+    title: 'Module 1: ROS 2'
+  }}
+  next={{
+    permalink: '/docs/module-01-ros2/chapter-01-02-nodes-topics-services',
+    title: '1.2 Nodes, Topics, Services and Actions'
+  }}
+/>

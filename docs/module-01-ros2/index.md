@@ -1,6 +1,16 @@
 ---
-sidebar_position: 2
+id: module-01-ros2-index
+title: "Module 1: The Robotic Nervous System (ROS 2)"
+sidebar_label: "Module 1: ROS 2"
+description: "Introduction to Robot Operating System 2 (ROS 2) - the middleware that connects all components of a robotic system"
+keywords:
+  - ROS 2
+  - Robotics
+  - Middleware
+  - Architecture
+prerequisites: []
 ---
+
 
 # Module 1: The Robotic Nervous System (ROS 2)
 
