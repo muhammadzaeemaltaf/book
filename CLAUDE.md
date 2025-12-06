@@ -208,3 +208,10 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
+
+## Active Technologies
+- Markdown for content, Python 3.10+ for code examples, JavaScript/TypeScript for Docusaurus customization + Docusaurus 3.x, Node.js 18+, ROS 2 Humble, Ubuntu 22.04 LTS, NVIDIA Isaac Sim, Gazebo Garden, OpenAI API (for RAG chatbot) (001-textbook-physical-ai)
+- Static file hosting via GitHub Pages, vector storage for RAG chatbot (Qdrant Cloud) (001-textbook-physical-ai)
+
+## Recent Changes
+- 001-textbook-physical-ai: Added Markdown for content, Python 3.10+ for code examples, JavaScript/TypeScript for Docusaurus customization + Docusaurus 3.x, Node.js 18+, ROS 2 Humble, Ubuntu 22.04 LTS, NVIDIA Isaac Sim, Gazebo Garden, OpenAI API (for RAG chatbot)
