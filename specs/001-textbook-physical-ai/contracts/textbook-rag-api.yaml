@@ -1,0 +1,200 @@
+# Textbook RAG Chatbot API Contract
+
+## Overview
+This document specifies the API contract for the Retrieval-Augmented Generation (RAG) chatbot functionality integrated with the Physical AI & Humanoid Robotics textbook. The chatbot provides AI-assisted learning experiences as specified in the project requirements.
+
+## API Base URL
+```
+https://[api-domain]/api/textbook-rag
+```
+
+## Endpoints
+
+### 1. Query Textbook Content
+**Endpoint**: `POST /query`
+**Description**: Submit a question about textbook content and receive an AI-generated response with relevant context
+
+#### Request
+```json
+{
+  "query": "string (required) - The question or query about textbook content",
+  "context_window": "integer (optional) - Number of context chunks to retrieve (default: 5)",
+  "temperature": "number (optional) - Response creativity (0.0 to 1.0, default: 0.3)",
+  "module_filter": "string (optional) - Limit search to specific module (e.g., 'module-01-ros2')",
+  "session_id": "string (optional) - User session identifier for conversation history"
+}
+```
+
+#### Response
+```json
+{
+  "response": "string - AI-generated response to the query",
+  "sources": [
+    {
+      "title": "string - Title of the source content",
+      "url": "string - URL to the source page/section",
+      "module": "string - Module identifier",
+      "chapter": "string - Chapter identifier",
+      "relevance_score": "number - Similarity score (0.0 to 1.0)"
+    }
+  ],
+  "query_id": "string - Unique identifier for this query",
+  "timestamp": "string - ISO 8601 timestamp of the response"
+}
+```
+
+#### Error Responses
+- `400 Bad Request`: Missing required fields or invalid parameters
+- `429 Too Many Requests`: Rate limit exceeded
+- `500 Internal Server Error`: Processing error
+
+### 2. Get Conversation History
+**Endpoint**: `GET /history/{session_id}`
+**Description**: Retrieve conversation history for a specific session
+
+#### Request
+```
+Path Parameters:
+- session_id: string (required) - User session identifier
+```
+
+#### Response
+```json
+{
+  "session_id": "string",
+  "history": [
+    {
+      "query_id": "string",
+      "query": "string",
+      "response": "string",
+      "timestamp": "string - ISO 8601 timestamp",
+      "sources": "array of source objects as defined above"
+    }
+  ]
+}
+```
+
+### 3. Clear Conversation History
+**Endpoint**: `DELETE /history/{session_id}`
+**Description**: Clear conversation history for a specific session
+
+#### Request
+```
+Path Parameters:
+- session_id: string (required) - User session identifier
+```
+
+#### Response
+```
+200 OK - History cleared successfully
+```
+
+### 4. Search Textbook Content
+**Endpoint**: `POST /search`
+**Description**: Perform semantic search on textbook content without AI response
+
+#### Request
+```json
+{
+  "query": "string (required) - Search query",
+  "limit": "integer (optional) - Maximum number of results (default: 10, max: 20)",
+  "module_filter": "string (optional) - Limit search to specific module",
+  "section_type": "string (optional) - Filter by content type (e.g., 'tutorial', 'concept', 'code-example')"
+}
+```
+
+#### Response
+```json
+{
+  "results": [
+    {
+      "title": "string - Title of the content section",
+      "url": "string - URL to the content",
+      "module": "string - Module identifier",
+      "chapter": "string - Chapter identifier",
+      "section": "string - Section identifier",
+      "content_preview": "string - Brief preview of the content",
+      "relevance_score": "number - Similarity score (0.0 to 1.0)"
+    }
+  ],
+  "total_results": "integer - Total number of matching results",
+  "query_id": "string - Unique identifier for this search"
+}
+```
+
+### 5. Get Textbook Content Structure
+**Endpoint**: `GET /content-structure`
+**Description**: Retrieve the hierarchical structure of textbook content
+
+#### Response
+```json
+{
+  "textbook": {
+    "title": "string - Textbook title",
+    "modules": [
+      {
+        "id": "string - Module identifier (e.g., 'module-01-ros2')",
+        "title": "string - Module title",
+        "description": "string - Module description",
+        "chapters": [
+          {
+            "id": "string - Chapter identifier (e.g., 'chapter-01-01-architecture')",
+            "title": "string - Chapter title",
+            "description": "string - Chapter description",
+            "word_count": "integer - Approximate word count",
+            "estimated_duration": "integer - Estimated completion time in minutes"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+## Authentication
+The API uses API key authentication for rate limiting and usage tracking:
+- Include header: `Authorization: Bearer {api_key}`
+- Rate limits: 100 requests per hour per API key
+
+## Error Format
+All error responses follow this structure:
+```json
+{
+  "error": {
+    "code": "string - Error code",
+    "message": "string - Human-readable error message",
+    "details": "object - Additional error details (optional)"
+  }
+}
+```
+
+## Usage Examples
+
+### Example 1: Query about ROS 2 Architecture
+```json
+POST /api/textbook-rag/query
+{
+  "query": "Explain the difference between ROS 2 nodes, topics, and services",
+  "context_window": 7
+}
+```
+
+### Example 2: Search for Code Examples
+```json
+POST /api/textbook-rag/search
+{
+  "query": "Python code example for ROS 2 publisher",
+  "section_type": "code-example",
+  "limit": 5
+}
+```
+
+## Performance Requirements
+- Response time: <2 seconds for 95% of requests
+- Availability: 99.9% uptime
+- Rate limiting: 100 requests per hour per API key
+
+## Data Privacy
+- Conversation history is stored temporarily and can be cleared by users
+- No personal information is stored beyond session identifiers
+- All textbook content is public and already available in the documentation
