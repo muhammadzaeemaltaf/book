@@ -1,8 +1,8 @@
 ---
 id: chapter-03-02-isaac-ros-bridge
-title: Isaac ROS Bridge
-sidebar_label: Isaac ROS Bridge
-description: Understanding Isaac ROS framework and hardware-accelerated perception
+title: "Isaac ROS Bridge"
+sidebar_label: "Chapter 2: Isaac ROS Bridge"
+description: "Understanding Isaac ROS framework and hardware-accelerated perception"
 keywords:
   - Isaac ROS
   - Hardware Acceleration
@@ -16,7 +16,7 @@ prerequisites:
 ---
 
 
-# Isaac ROS Bridge: Hardware Acceleration for Perception
+# Chapter 2 - Isaac ROS Bridge
 
 ## Learning Objectives
 

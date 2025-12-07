@@ -48,10 +48,10 @@ export default function TableOfContents({ modules = [] }) {
       <style jsx>{`
         .table-of-contents {
           margin: 2rem 0;
-          padding: 2rem;
+          padding: 1rem;
           border: 1px solid #e5e7eb;
           border-radius: 8px;
-          background-color: #fafafa;
+          // background-color: #fafafa;
         }
 
         .table-of-contents__header {

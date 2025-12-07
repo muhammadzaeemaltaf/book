@@ -1,8 +1,8 @@
 ---
 id: chapter-02-01-simulation-fundamentals
-title: Simulation Fundamentals
-sidebar_label: Simulation Fundamentals
-description: Understanding the core principles of physics simulation in robotics and digital twins
+title: "Simulation Fundamentals"
+sidebar_label: "Chapter 1: Simulation Fundamentals"
+description: "Understanding the core principles of physics simulation in robotics and digital twins"
 keywords:
   - Simulation
   - Digital Twin
@@ -14,7 +14,7 @@ prerequisites:
 ---
 
 
-# Physics Simulation Fundamentals
+# Chapter 1 - Simulation Fundamentals
 
 ## Learning Objectives
 

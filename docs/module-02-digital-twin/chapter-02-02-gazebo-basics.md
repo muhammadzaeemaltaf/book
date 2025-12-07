@@ -1,8 +1,8 @@
 ---
 id: chapter-02-02-gazebo-basics
-title: Gazebo Basics
-sidebar_label: Gazebo Basics
-description: Mastering Gazebo simulation environment setup and configuration for robot models
+title: "Gazebo Basics"
+sidebar_label: "Chapter 2: Gazebo Basics"
+description: "Mastering Gazebo simulation environment setup and configuration for robot models"
 keywords:
   - Gazebo
   - Simulation
@@ -15,7 +15,7 @@ prerequisites:
 ---
 
 
-# Physics Simulation with Gazebo
+# Chapter 2 - Gazebo Basics
 
 ## Learning Objectives
 

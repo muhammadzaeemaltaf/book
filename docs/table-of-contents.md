@@ -27,7 +27,7 @@ This comprehensive textbook is organized into four progressive modules, each bui
 
 ## Module 1: The Robotic Nervous System (ROS 2)
 
-- **Module Overview**: [Module 1: The Robotic Nervous System (ROS 2)](/docs/module-01-ros2/index)
+- **Module Overview**: [Module 1: The Robotic Nervous System (ROS 2)](/docs/module-01-ros2)
 - **Chapter 1**: [ROS 2 Architecture & Core Concepts](/docs/module-01-ros2/chapter-01-01-architecture)
   - Understanding fundamental ROS 2 architecture
   - Core concepts of distributed robotic systems
@@ -46,7 +46,7 @@ This comprehensive textbook is organized into four progressive modules, each bui
 
 ## Module 2: The Digital Twin (Gazebo & Unity)
 
-- **Module Overview**: [Module 2: The Digital Twin (Gazebo & Unity)](/docs/module-02-digital-twin/index)
+- **Module Overview**: [Module 2: The Digital Twin (Gazebo & Unity)](/docs/module-02-digital-twin)
 - **Chapter 1**: [Simulation Fundamentals](/docs/module-02-digital-twin/chapter-02-01-simulation-fundamentals)
   - Core principles of physics simulation in robotics
   - Understanding digital twins and their applications
@@ -62,7 +62,7 @@ This comprehensive textbook is organized into four progressive modules, each bui
 
 ## Module 3: The AI-Robot Brain (NVIDIA Isaac™)
 
-- **Module Overview**: [Module 3: The AI-Robot Brain (NVIDIA Isaac™)](/docs/module-03-isaac/index)
+- **Module Overview**: [Module 3: The AI-Robot Brain (NVIDIA Isaac™)](/docs/module-03-isaac)
 - **Chapter 1**: [Isaac Sim Fundamentals](/docs/module-03-isaac/chapter-03-01-isaac-sim-fundamentals)
   - NVIDIA Isaac Sim architecture and capabilities
   - Setting up Isaac Sim for robotic simulation
@@ -78,7 +78,7 @@ This comprehensive textbook is organized into four progressive modules, each bui
 
 ## Module 4: Vision-Language-Action (VLA)
 
-- **Module Overview**: [Module 4: Vision-Language-Action (VLA)](/docs/module-04-vla/index)
+- **Module Overview**: [Module 4: Vision-Language-Action (VLA)](/docs/module-04-vla)
 - **Chapter 1**: [VLA Fundamentals](/docs/module-04-vla/chapter-04-01-vla-fundamentals)
   - Vision-Language-Action models for humanoid robotics
   - Multimodal architectures and embodied language models

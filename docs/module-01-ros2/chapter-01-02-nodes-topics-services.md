@@ -1,7 +1,7 @@
 ---
 id: chapter-01-02-nodes-topics-services
 title: Nodes, Topics, Services and Actions
-sidebar_label: Nodes, Topics, Services and Actions
+sidebar_label: "Chapter 2: Nodes, Topics, Services and Actions"
 description: Understanding ROS 2 communication patterns including nodes, topics, services, and actions
 keywords:
   - ROS 2
@@ -15,7 +15,7 @@ prerequisites:
 ---
 
 
-# Nodes, Topics, and Services in Depth
+# Chapter 2 - Nodes, Topics, and Services in Depth
 
 ## Learning Objectives
 

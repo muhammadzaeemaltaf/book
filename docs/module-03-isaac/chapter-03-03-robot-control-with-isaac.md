@@ -1,8 +1,8 @@
 ---
 id: chapter-03-03-robot-control-with-isaac
-title: Robot Control with Isaac
-sidebar_label: Robot Control with Isaac
-description: Implementing advanced navigation and manipulation using Isaac Sim and Nav2
+title: "Robot Control with Isaac"
+sidebar_label: "Chapter 3: Robot Control with Isaac"
+description: "Implementing advanced navigation and manipulation using Isaac Sim and Nav2"
 keywords:
   - Isaac Sim
   - Navigation
@@ -18,7 +18,7 @@ prerequisites:
 ---
 
 
-# Robot Control with Isaac: Advanced Navigation and Manipulation
+# Chapter 3 - Robot Control with Isaac
 
 ## Learning Objectives
 

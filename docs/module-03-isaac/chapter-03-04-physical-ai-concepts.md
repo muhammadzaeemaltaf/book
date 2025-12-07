@@ -1,7 +1,7 @@
 ---
 id: chapter-03-04-physical-ai-concepts
-title: "Chapter 3.4: Physical AI Concepts"
-sidebar_label: "3.4 Physical AI Concepts"
+title: "Physical AI Concepts"
+sidebar_label: "Chapter 4: Physical AI Concepts"
 sidebar_position: 4
 description: "Explore Physical AI foundations: embodied intelligence, sensor-motor integration, world models, sim-to-real transfer, and NVIDIA's Physical AI platform for humanoid robotics."
 keywords: [Physical AI, embodied AI, world models, sim-to-real, NVIDIA Omniverse, Isaac platform, humanoid robotics]
@@ -14,7 +14,7 @@ prerequisites:
   - chapter-03-03-robot-control-with-isaac
 ---
 
-# Chapter 3.4: Physical AI Concepts
+# Chapter 4 - Physical AI Concepts
 
 ## Learning Objectives
 

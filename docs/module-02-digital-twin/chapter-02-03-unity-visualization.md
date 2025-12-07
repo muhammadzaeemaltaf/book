@@ -1,8 +1,8 @@
 ---
 id: chapter-02-03-unity-visualization
-title: Unity Visualization
-sidebar_label: Unity Visualization
-description: Understanding Unity as a visualization platform for humanoid robots and integrating with ROS 2
+title: "Unity Visualization"
+sidebar_label: "Chapter 3: Unity Visualization"
+description: "Understanding Unity as a visualization platform for humanoid robots and integrating with ROS 2"
 keywords:
   - Unity
   - Visualization
@@ -15,7 +15,7 @@ prerequisites:
 ---
 
 
-# Unity Visualization for Humanoid Robotics
+# Chapter 3 - Unity Visualization
 
 ## Learning Objectives
 

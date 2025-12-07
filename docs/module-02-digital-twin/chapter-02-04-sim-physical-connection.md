@@ -1,8 +1,8 @@
 ---
 id: chapter-02-04-sim-physical-connection
-title: Simulation-Physical Connection
-sidebar_label: Simulation-Physical Connection
-description: Understanding the relationship between simulated and physical robotic systems
+title: "Simulation-Physical Connection"
+sidebar_label: "Chapter 4: Simulation-Physical Connection"
+description: "Understanding the relationship between simulated and physical robotic systems"
 keywords:
   - Simulation
   - Physical Systems
@@ -16,7 +16,7 @@ prerequisites:
 ---
 
 
-# Connecting Simulation to Physical Reality
+# Chapter 4 - Simulation-Physical Connection
 
 ## Learning Objectives
 

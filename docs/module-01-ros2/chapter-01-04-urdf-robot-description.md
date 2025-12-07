@@ -1,7 +1,7 @@
 ---
 id: chapter-01-04-urdf-robot-description
-title: "Chapter 1.4: URDF and Robot Description"
-sidebar_label: "1.4 URDF & Robot Description"
+title: "URDF and Robot Description"
+sidebar_label: "Chapter 4: URDF and Robot Description"
 sidebar_position: 4
 description: "Master URDF (Unified Robot Description Format) for humanoid robots, including joint definitions, kinematics, collision models, and ROS 2 integration."
 keywords: [URDF, robot description, humanoid kinematics, ROS 2, xacro, robot_state_publisher]
@@ -11,7 +11,7 @@ prerequisites:
   - chapter-01-03-workspaces-packages
 ---
 
-# Chapter 1.4: URDF and Robot Description
+# Chapter 4 - URDF and Robot Description
 
 ## Learning Objectives
 
