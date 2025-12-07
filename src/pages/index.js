@@ -14,19 +14,8 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <div className="row">
-          {/* Hero Image (Left Side) */}
-          <div className="col col--4">
-            <div className={clsx('hero-image', styles.heroImage)}>
-              <img
-                src="img/hero-robot.png"
-                alt="Humanoid robot with AI visualization"
-                style={{width: '100%', maxWidth: '500px', height: 'auto'}}
-              />
-            </div>
-          </div>
-
-          {/* Hero Content (Right Side) */}
-          <div className="col col--8">
+          {/* Hero Content (Centered) */}
+          <div className="col col--12">
             <div className={clsx('hero-content', styles.heroContent)}>
               {/* Animated Badge */}
               <div className={clsx('hero-badge', 'animate-slide-down', styles.heroBadge)}>
@@ -66,7 +55,7 @@ function HomepageHeader() {
               </div>
 
               {/* Key Features - Animated */}
-              <div className={clsx('hero-features', 'animate-fade-in-up', 'delay-500')}>
+              <div className={clsx('hero-features', 'animate-fade-in-up', 'delay-500')} style={{ marginTop: '24px', textAlign: 'left' }}>
                 <div className="feature-item">
                   <span>✅</span>
                   <span>13-Week Structured Curriculum</span>
@@ -88,25 +77,25 @@ function HomepageHeader() {
         <div className={clsx('row', 'stats-row', styles.statsRow)}>
           <div className={clsx('col', 'col--3', 'animate-scale-in', 'delay-600')}>
             <div className="stat-card">
-              <div className="stat-number">4</div>
+              <div className="stat-number" style={{fontSize: '28px', fontWeight: '700', color: 'var(--color-primary)', lineHeight: '1', marginBottom: '8px'}}>4</div>
               <div className="stat-label">Core Modules</div>
             </div>
           </div>
           <div className={clsx('col', 'col--3', 'animate-scale-in', 'delay-700')}>
             <div className="stat-card">
-              <div className="stat-number">50+</div>
+              <div className="stat-number" style={{fontSize: '28px', fontWeight: '700', color: 'var(--color-primary)', lineHeight: '1', marginBottom: '8px'}}>50+</div>
               <div className="stat-label">Code Examples</div>
             </div>
           </div>
           <div className={clsx('col', 'col--3', 'animate-scale-in', 'delay-800')}>
             <div className="stat-card">
-              <div className="stat-number">13</div>
+              <div className="stat-number" style={{fontSize: '28px', fontWeight: '700', color: 'var(--color-primary)', lineHeight: '1', marginBottom: '8px'}}>13</div>
               <div className="stat-label">Weeks</div>
             </div>
           </div>
           <div className={clsx('col', 'col--3', 'animate-scale-in', 'delay-900')}>
             <div className="stat-card">
-              <div className="stat-number">100%</div>
+              <div className="stat-number" style={{fontSize: '28px', fontWeight: '700', color: 'var(--color-primary)', lineHeight: '1', marginBottom: '8px'}}>100%</div>
               <div className="stat-label">Hands-on</div>
             </div>
           </div>

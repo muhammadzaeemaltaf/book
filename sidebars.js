@@ -3,12 +3,12 @@ const sidebars = {
   textbookSidebar: [
     {
       type: 'category',
-      label: 'Introduction',
+      label: 'Course Overview',
       items: [
         'intro',
         'table-of-contents',  // Added table of contents page
       ],
-      collapsed: false,
+      collapsed: true,
     },
     {
       type: 'category',
@@ -41,7 +41,7 @@ const sidebars = {
           label: 'Chapter 5: Launch Files - Coordinating Complex Robot Systems',
         },
       ],
-      collapsed: false,
+      collapsed: true,
     },
     {
       type: 'category',
@@ -69,7 +69,7 @@ const sidebars = {
           label: 'Chapter 4: Connecting Simulation to Physical Robots',
         },
       ],
-      collapsed: false,
+      collapsed: true,
     },
     {
       type: 'category',
@@ -97,7 +97,7 @@ const sidebars = {
           label: 'Chapter 4: Physical AI Concepts - Intelligence in Motion',
         },
       ],
-      collapsed: false,
+      collapsed: true,
     },
     {
       type: 'category',
@@ -125,7 +125,7 @@ const sidebars = {
           label: 'Chapter 4: Capstone Project - Building an Intelligent Humanoid Robot',
         },
       ],
-      collapsed: false,
+      collapsed: true,
     },
     {
       type: 'category',

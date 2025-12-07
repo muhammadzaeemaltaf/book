@@ -1,26 +1,30 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from "prism-react-renderer";
+
+const isGithubPages = process.env.DOCUSAURUS_ENV === 'github';
 
 /** @type {import('@docusaurus/types').Config} */
+
 const config = {
-  title: 'Physical AI & Humanoid Robotics Textbook',
-  tagline: 'Bridging digital AI knowledge to physical robotics for intermediate AI/software developers',
-  favicon: 'img/favicon.ico',
+  title: "Physical AI & Humanoid Robotics Textbook",
+  tagline:
+    "Bridging digital AI knowledge to physical robotics for intermediate AI/software developers",
+  favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: 'https://muhammadzaeemaltaf.github.io',
+  url: "https://muhammadzaeemaltaf.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub Pages deployment, it's usually '/<orgName>/<repoName>/'
-  baseUrl: '/book/',
+  baseUrl: isGithubPages ? "/book/" : "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'muhammadzaeemaltaf', // Usually your GitHub org/user name.
-  projectName: 'book', // Usually your repo name.
+  organizationName: "muhammadzaeemaltaf", // Usually your GitHub org/user name.
+  projectName: "book", // Usually your repo name.
   trailingSlash: false,
-  deploymentBranch: 'gh-pages', // Branch that GitHub Pages will deploy from
+  deploymentBranch: "gh-pages", // Branch that GitHub Pages will deploy from
 
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
   markdown: {
     mermaid: true,
     mdx1Compat: {
@@ -34,29 +38,44 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/muhammadzaeemaltaf/book/tree/main/',
-          breadcrumbs: true,  // Enable breadcrumbs
-          routeBasePath: '/docs', // Ensure docs are served from /docs/ path
+          editUrl: "https://github.com/muhammadzaeemaltaf/book/tree/main/",
+          breadcrumbs: true, // Enable breadcrumbs
+          routeBasePath: "/docs", // Ensure docs are served from /docs/ path
         },
         blog: false, // Disable blog for textbook
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       }),
+    ],
+  ],
+
+  plugins: [
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        language: ["en"],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        docsRouteBasePath: "/docs",
+      },
     ],
   ],
 
@@ -64,54 +83,74 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: 'Physical AI & Robotics Textbook',
+        title: "Physical AI & Robotics Textbook",
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Textbook',
+            type: "doc",
+            docId: "intro",
+            position: "left",
+            label: "Textbook",
           },
           {
-            href: 'https://github.com/muhammadzaeemaltaf/book',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/muhammadzaeemaltaf/book",
+            label: "GitHub",
+            position: "right",
+          },
+          {
+            type: "search",
+            position: "right",
           },
         ],
       },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
+      theme: {
+        customCss: [
+          "./src/css/custom.css",
+          "./src/css/sidebar.css",
+          "./src/css/doc-pages.css",
+        ],
+      },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Textbook',
+            title: "Textbook",
             items: [
               {
-                label: 'Introduction',
-                to: '/docs/intro',
+                label: "Introduction",
+                to: "/docs/intro",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: "Stack Overflow",
+                href: "https://stackoverflow.com/questions/tagged/docusaurus",
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: "Discord",
+                href: "https://discordapp.com/invite/docusaurus",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/muhammadzaeemaltaf/book',
+                label: "GitHub",
+                href: "https://github.com/muhammadzaeemaltaf/book",
+              },
+              {
+                label: "LinkedIn",
+                href: "https://www.linkedin.com/in/muhammadzaeemaltaf/",
               },
             ],
           },
