@@ -1,0 +1,18 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+.features {
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  width: 100%;
+  background: var(--color-bg-dark);
+}
+
+html[data-theme='light'] .features {
+  background: var(--color-bg-light);
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
