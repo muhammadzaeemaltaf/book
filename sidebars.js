@@ -132,6 +132,10 @@ const sidebars = {
       label: 'Appendices',
       items: [
         'appendices/index',
+        'appendices/troubleshooting-guide',
+        'appendices/faq',
+        'appendices/hardware-requirements',
+        'appendices/software-setup',
       ],
       collapsed: true,
     },

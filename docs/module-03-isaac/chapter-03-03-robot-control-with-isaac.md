@@ -1169,13 +1169,3 @@ def main(args=None):
 if __name__ == '__main__':
     main()
 
-<ChapterNavigation
-  previous={{
-    permalink: '/docs/module-03-isaac/chapter-03-02-isaac-ros-bridge',
-    title: '3.2 Isaac ROS Bridge'
-  }}
-  next={{
-    permalink: '/docs/module-03-isaac/chapter-03-04-physical-ai-concepts',
-    title: '3.4 Physical AI Concepts'
-  }}
-/>
