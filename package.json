@@ -30,6 +30,7 @@
     "@mdx-js/react": "^3.1.1",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
+    "@easyops-cn/docusaurus-search-local": "^0.40.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },

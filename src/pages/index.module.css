@@ -32,10 +32,11 @@ html[data-theme='light'] .heroBanner {
 }
 
 .heroContent {
-  text-align: left;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 100%;
   padding: 0 2rem;
 }
