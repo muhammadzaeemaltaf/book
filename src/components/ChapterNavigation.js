@@ -9,6 +9,9 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 export default function ChapterNavigation({ previous, next }) {
   const { siteConfig } = useDocusaurusContext();
 
+
+  return null;
+
   if (!previous && !next) {
     return null;
   }

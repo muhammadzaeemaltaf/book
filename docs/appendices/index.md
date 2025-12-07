@@ -10,10 +10,10 @@ This section contains supplementary materials to support your learning journey t
 
 ### Available Appendices
 
-- **Hardware Setup Guide**: Requirements and configuration for different hardware tiers
-- **Software Installation Guide**: Step-by-step setup for Ubuntu 22.04 + ROS 2 Humble
-- **Troubleshooting Guide**: Common errors and solutions
-- **Resources and Further Learning**: Links to official documentation and advanced materials
+- **[Hardware Requirements Guide](./hardware-requirements)**: Detailed hardware specifications and requirements
+- **[Software Setup Guide](./software-setup)**: Step-by-step installation instructions for development environment
+- **[Troubleshooting Guide](./troubleshooting-guide)**: Common errors and solutions
+- **[Frequently Asked Questions (FAQ)](./faq)**: Answers to common questions about the textbook
 
 ### System Requirements
 

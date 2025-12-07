@@ -806,13 +806,3 @@ def generate_launch_description():
         # stereo_rectification,  # Uncomment when actual Isaac ROS packages are available
     ])
 
-<ChapterNavigation
-  previous={{
-    permalink: '/docs/module-03-isaac/chapter-03-01-isaac-sim-fundamentals',
-    title: '3.1 Isaac Sim Fundamentals'
-  }}
-  next={{
-    permalink: '/docs/module-03-isaac/chapter-03-03-robot-control-with-isaac',
-    title: '3.3 Robot Control with Isaac'
-  }}
-/>
