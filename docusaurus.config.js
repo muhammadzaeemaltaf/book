@@ -50,6 +50,7 @@ const config = {
           editUrl:
             'https://github.com/muhammadzaeemaltaf/book/tree/main/',
           breadcrumbs: true,  // Enable breadcrumbs
+          routeBasePath: '/docs', // Ensure docs are served from /docs/ path
         },
         blog: false, // Disable blog for textbook
         theme: {

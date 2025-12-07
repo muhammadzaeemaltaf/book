@@ -61,7 +61,7 @@ export default function TableOfContents({ modules = [] }) {
 
         .table-of-contents__header h2 {
           margin: 0 0 0.5rem 0;
-          color: #1f2937;
+          color: var(--color-accent);
           font-size: 1.875rem;
         }
 
