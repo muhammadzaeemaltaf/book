@@ -1,0 +1,201 @@
+# API Contract: RAG Chatbot Backend
+
+## Overview
+This document specifies the API contracts for the RAG Chatbot backend system. All endpoints follow REST principles with JSON request/response bodies.
+
+## Base URL
+```
+http://localhost:8000  # Default development
+```
+
+## Common Headers
+All requests should include:
+```
+Content-Type: application/json
+Accept: application/json
+```
+
+## Authentication
+API endpoints do not require authentication for local development. For production deployments, authentication headers may be required.
+
+## Endpoints
+
+### 1. Ingest Documents
+```
+POST /ingest
+```
+
+#### Request
+```json
+{
+  "source_path": "string",
+  "chunk_size": "integer (optional, default: 512)",
+  "overlap": "integer (optional, default: 50)",
+  "recursive": "boolean (optional, default: true)"
+}
+```
+
+#### Response (200 OK)
+```json
+{
+  "status": "success",
+  "processed_count": 10,
+  "message": "Successfully ingested 10 documents",
+  "pipeline_id": "string"
+}
+```
+
+#### Response (400 Bad Request)
+```json
+{
+  "error": "string",
+  "message": "string"
+}
+```
+
+### 2. Check Ingestion Status
+```
+GET /ingest/status/{pipeline_id}
+```
+
+#### Response (200 OK)
+```json
+{
+  "pipeline_id": "string",
+  "status": "pending | processing | completed | failed",
+  "total_documents": "integer",
+  "processed_documents": "integer",
+  "progress_percentage": "float",
+  "message": "string (optional)"
+}
+```
+
+### 3. Search Documents
+```
+POST /search
+```
+
+#### Request
+```json
+{
+  "query": "string",
+  "top_k": "integer (optional, default: 5)",
+  "filters": {
+    "source_document": "string (optional)",
+    "metadata": "object (optional)"
+  }
+}
+```
+
+#### Response (200 OK)
+```json
+{
+  "results": [
+    {
+      "id": "string",
+      "content": "string",
+      "score": "float",
+      "source_document": "string",
+      "metadata": "object",
+      "chunk_index": "integer"
+    }
+  ],
+  "query": "string",
+  "search_time_ms": "float"
+}
+```
+
+### 4. Chat with RAG System
+```
+POST /chat
+```
+
+#### Request
+```json
+{
+  "message": "string",
+  "mode": "normal_qa | selected_text",
+  "selected_text": "string (required if mode is selected_text)",
+  "stream": "boolean (optional, default: true)",
+  "top_k": "integer (optional, default: 5)",
+  "temperature": "float (optional, default: 0.7)"
+}
+```
+
+#### Response (200 OK) - Non-streaming
+```json
+{
+  "id": "string",
+  "message": "string",
+  "mode_used": "normal_qa | selected_text | vector_search",
+  "retrieved_context": ["string"],
+  "confidence": "float",
+  "created_at": "datetime (ISO 8601)",
+  "usage": {
+    "prompt_tokens": "integer",
+    "completion_tokens": "integer",
+    "total_tokens": "integer"
+  }
+}
+```
+
+#### Response (200 OK) - Streaming (Server-Sent Events)
+```
+data: {"type": "start", "message_id": "string"}
+
+data: {"type": "chunk", "content": "First part of response"}
+
+data: {"type": "chunk", "content": "Second part of response"}
+
+data: {"type": "end", "message_id": "string", "final_response": {"id": "string", "message": "complete response", ...}}
+```
+
+### 5. Health Check
+```
+GET /health
+```
+
+#### Response (200 OK)
+```json
+{
+  "status": "healthy",
+  "timestamp": "datetime (ISO 8601)",
+  "services": {
+    "qdrant": "available | unavailable",
+    "cohere": "available | unavailable",
+    "gemini": "available | unavailable"
+  }
+}
+```
+
+## Error Responses
+
+All error responses follow this structure:
+
+```json
+{
+  "error": "string",
+  "message": "string",
+  "timestamp": "datetime (ISO 8601)",
+  "status_code": "integer"
+}
+```
+
+## Data Types
+
+- `string`: Text content
+- `integer`: Whole numbers
+- `float`: Decimal numbers
+- `boolean`: true/false values
+- `datetime`: ISO 8601 formatted date-time strings
+- `object`: Key-value pairs
+- `array`: List of items of the specified type
+
+## Rate Limits
+
+- Development: No rate limits
+- Production: TBD based on deployment configuration
+
+## Versioning
+
+This is version 1.0 of the API. Breaking changes will increment the major version number.

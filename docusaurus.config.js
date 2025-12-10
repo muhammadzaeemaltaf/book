@@ -114,6 +114,7 @@ const config = {
           "./src/css/custom.css",
           "./src/css/sidebar.css",
           "./src/css/doc-pages.css",
+          "./src/css/chat.css", // Add chat CSS
         ],
       },
       footer: {
