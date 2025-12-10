@@ -31,8 +31,12 @@ export const ChatWidget: React.FC<ChatWidgetProps> = ({
   const [selectionPopup, setSelectionPopup] = useState<{top: number, left: number, text: string} | null>(null);
 
   const [isMinimized, setIsMinimized] = useState(() => {
-    const savedMinimized = sessionStorage.getItem('chatWidgetMinimized');
-    return savedMinimized ? JSON.parse(savedMinimized) : false;
+    // Only access sessionStorage in browser environment
+    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+      const savedMinimized = sessionStorage.getItem('chatWidgetMinimized');
+      return savedMinimized ? JSON.parse(savedMinimized) : false;
+    }
+    return false;
   });
 
   const {
@@ -171,7 +175,9 @@ export const ChatWidget: React.FC<ChatWidgetProps> = ({
     const newOpenState = !isOpen;
     setIsOpen(newOpenState);
     // Use sessionStorage instead of localStorage for session-only persistence
-    sessionStorage.setItem('chatWidgetOpen', JSON.stringify(newOpenState));
+    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+      sessionStorage.setItem('chatWidgetOpen', JSON.stringify(newOpenState));
+    }
     if (newOpenState) {
       setIsMinimized(false); // When opening, ensure it's not minimized
       // Add initial greeting if no messages exist
@@ -190,7 +196,9 @@ export const ChatWidget: React.FC<ChatWidgetProps> = ({
   const toggleMinimize = () => {
     const newMinimizedState = !isMinimized;
     setIsMinimized(newMinimizedState);
-    sessionStorage.setItem('chatWidgetMinimized', JSON.stringify(newMinimizedState));
+    if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+      sessionStorage.setItem('chatWidgetMinimized', JSON.stringify(newMinimizedState));
+    }
   };
 
   // Function to handle selecting the text
@@ -205,11 +213,15 @@ export const ChatWidget: React.FC<ChatWidgetProps> = ({
       if (!isOpen) {
         setIsOpen(true);
         // Store the open state in sessionStorage
-        sessionStorage.setItem('chatWidgetOpen', JSON.stringify(true));
+        if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+          sessionStorage.setItem('chatWidgetOpen', JSON.stringify(true));
+        }
       }
       if (isMinimized) {
         setIsMinimized(false);
-        sessionStorage.setItem('chatWidgetMinimized', JSON.stringify(false));
+        if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+          sessionStorage.setItem('chatWidgetMinimized', JSON.stringify(false));
+        }
       }
     }
   };
