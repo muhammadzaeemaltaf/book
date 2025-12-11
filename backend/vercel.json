@@ -1,14 +1,27 @@
 {
   "version": 2,
+  "name": "rag-chatbot-backend",
+  "framework": "fastapi",
   "functions": {
-    "src/api/**/*.py": {
-      "runtime": "python3.12"
+    "src/api/main.py": {
+      "runtime": "python3.10",
+      "memory": 1024,
+      "maxDuration": 30
     }
   },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/src/api/main.py"
+      "dest": "src/api/main.py"
+    }
+  ],
+  "env": {
+    "PYTHONPATH": "."
+  },
+  "builds": [
+    {
+      "src": "src/api/main.py",
+      "use": "@vercel/python"
     }
   ]
 }
