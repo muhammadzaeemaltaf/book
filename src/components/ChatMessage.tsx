@@ -39,7 +39,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
                   remarkPlugins={[remarkGfm]}
                   components={{
                     // Custom rendering for better styling
-                    p: ({node, ...props}) => <p style={{marginBottom: '0.5em', lineHeight: '1.6', color: '#1f2937'}} {...props} />,
+                    p: ({node, ...props}) => <p style={{marginBottom: '0.5em', lineHeight: '1.6',}} {...props} />,
                     ul: ({node, ...props}) => <ul style={{marginLeft: '1.5em', marginBottom: '0.5em'}} {...props} />,
                     ol: ({node, ...props}) => <ol style={{marginLeft: '1.5em', marginBottom: '0.5em'}} {...props} />,
                     li: ({node, ...props}) => <li style={{marginBottom: '0.25em'}} {...props} />,

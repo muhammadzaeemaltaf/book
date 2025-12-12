@@ -193,6 +193,17 @@ export const ChatWidget: React.FC<ChatWidgetProps> = ({
     }
   };
 
+  const handleHeaderClick = () => {
+    // If minimized, maximize it (expand the chat body)
+    if (isMinimized) {
+      setIsMinimized(false);
+      if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+        sessionStorage.setItem('chatWidgetMinimized', JSON.stringify(false));
+      }
+    }
+    // If not minimized and open, do nothing (don't close on header click when open)
+  };
+
   const toggleMinimize = () => {
     const newMinimizedState = !isMinimized;
     setIsMinimized(newMinimizedState);
@@ -228,34 +239,42 @@ export const ChatWidget: React.FC<ChatWidgetProps> = ({
 
   return (
     <div className={`chat-widget ${isOpen ? 'open' : ''} ${isMinimized ? 'minimized' : ''}`}>
-      {/* Chat header */}
-      <div className="chat-header" onClick={toggleChat}>
-        <div className="chat-header-content">
-          <h3>AI book assistant</h3>
-          <div className="chat-controls">
-            <button
-              className="minimize-btn"
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleMinimize();
-              }}
-              aria-label={isMinimized ? "Maximize chat" : "Minimize chat"}
-            >
-              {isMinimized ? '+' : '−'}
-            </button>
-            <button
-              className="close-btn"
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsOpen(false);
-              }}
-              aria-label="Close chat"
-            >
-              ×
-            </button>
+      {/* Chat header - only show when open */}
+      {isOpen && (
+        <div className="chat-header" onClick={handleHeaderClick}>
+          <div className="chat-header-content">
+            <h3>AI book assistant</h3>
+            <div className="chat-controls">
+              <button
+                className="minimize-btn"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleMinimize();
+                }}
+                aria-label={isMinimized ? "Maximize chat" : "Minimize chat"}
+              >
+                {isMinimized ? '+' : '−'}
+              </button>
+              <button
+                className="close-btn"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  // Close the chat completely (convert to floating button)
+                  setIsOpen(false);
+                  setIsMinimized(false);
+                  if (typeof window !== 'undefined' && typeof sessionStorage !== 'undefined') {
+                    sessionStorage.setItem('chatWidgetOpen', JSON.stringify(false));
+                    sessionStorage.setItem('chatWidgetMinimized', JSON.stringify(false));
+                  }
+                }}
+                aria-label="Close chat"
+              >
+                ×
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Chat body - only show when open and not minimized */}
       {isOpen && !isMinimized && (
@@ -324,13 +343,6 @@ export const ChatWidget: React.FC<ChatWidgetProps> = ({
             left: `${selectionPopup.left}px`,
             transform: 'translateX(-50%)',
             zIndex: 1001,
-            backgroundColor: '#4f46e5',
-            color: 'white',
-            padding: '6px 12px',
-            borderRadius: '4px',
-            fontSize: '14px',
-            cursor: 'pointer',
-            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
           }}
           onClick={handleSelectText}
         >
