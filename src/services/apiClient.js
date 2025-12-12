@@ -52,7 +52,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.apiClient = void 0;
 var ApiClient = /** @class */ (function () {
     function ApiClient(baseUrl) {
-        this.baseUrl = baseUrl || 'http://localhost:8000';
+        var _a;
+        // Use the provided baseUrl, or fall back to the production URL
+        // Note: In browser environment, process.env is not available
+        var envUrl = typeof process !== 'undefined' && ((_a = process.env) === null || _a === void 0 ? void 0 : _a.REACT_APP_API_BASE_URL);
+        this.baseUrl = baseUrl || envUrl || 'https://book-backend-production-ab16.up.railway.app';
         this.defaultHeaders = {
             'Content-Type': 'application/json',
         };
