@@ -17,6 +17,12 @@ Requires-Dist: pytest>=7.4.0
 Requires-Dist: httpx>=0.25.0
 Requires-Dist: openai-agents>=0.6.2
 Requires-Dist: google-generativeai>=0.8.5
+Requires-Dist: alembic>=1.13.1
+Requires-Dist: sqlalchemy>=2.0.0
+Requires-Dist: asyncpg>=0.29.0
+Requires-Dist: sqlmodel>=0.0.16
+Requires-Dist: psycopg2-binary>=2.9.0
+Requires-Dist: email-validator>=2.0.0
 Provides-Extra: dev
 Requires-Dist: black>=23.0.0; extra == "dev"
 Requires-Dist: flake8>=6.0.0; extra == "dev"

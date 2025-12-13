@@ -1,5 +1,7 @@
 agents
 api
+core
+middleware
 models
 services
 utils
