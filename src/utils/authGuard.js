@@ -1,14 +1,32 @@
+import React, { useEffect, useState } from 'react';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import authService from '../services/authService';
 
 // Higher-order component for protecting routes that require authentication
 export const withAuthGuard = (Component) => {
   return function AuthGuardComponent(props) {
-    const isAuthenticated = authService.isAuthenticated();
+    const [isChecking, setIsChecking] = useState(true);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    useEffect(() => {
+      if (ExecutionEnvironment.canUseDOM) {
+        const authenticated = authService.isAuthenticated();
+        setIsAuthenticated(authenticated);
+        setIsChecking(false);
+
+        if (!authenticated) {
+          // Redirect to sign in page with return URL
+          const returnUrl = window.location.pathname + window.location.search;
+          window.location.href = `/signin?return=${encodeURIComponent(returnUrl)}`;
+        }
+      }
+    }, []);
+
+    if (isChecking || !ExecutionEnvironment.canUseDOM) {
+      return null; // Return null during SSR or while checking
+    }
 
     if (!isAuthenticated) {
-      // Redirect to sign in page with return URL
-      const returnUrl = window.location.pathname + window.location.search;
-      window.location.href = `/signin?return=${encodeURIComponent(returnUrl)}`;
       return null; // Return null while redirect happens
     }
 
@@ -19,11 +37,27 @@ export const withAuthGuard = (Component) => {
 // Higher-order component for protecting routes that require unauthenticated access (e.g., sign in page)
 export const withUnauthGuard = (Component) => {
   return function UnauthGuardComponent(props) {
-    const isAuthenticated = authService.isAuthenticated();
+    const [isChecking, setIsChecking] = useState(true);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    useEffect(() => {
+      if (ExecutionEnvironment.canUseDOM) {
+        const authenticated = authService.isAuthenticated();
+        setIsAuthenticated(authenticated);
+        setIsChecking(false);
+
+        if (authenticated) {
+          // Redirect to dashboard or home page
+          window.location.href = '/';
+        }
+      }
+    }, []);
+
+    if (isChecking || !ExecutionEnvironment.canUseDOM) {
+      return null; // Return null during SSR or while checking
+    }
 
     if (isAuthenticated) {
-      // Redirect to dashboard or home page
-      window.location.href = '/';
       return null; // Return null while redirect happens
     }
 
@@ -33,18 +67,25 @@ export const withUnauthGuard = (Component) => {
 
 // Hook for checking authentication status (can be used in functional components)
 export const useAuthGuard = () => {
-  const isAuthenticated = authService.isAuthenticated();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    if (ExecutionEnvironment.canUseDOM) {
+      setIsAuthenticated(authService.isAuthenticated());
+    }
+  }, []);
 
   return {
     isAuthenticated,
-    checkAuth: () => authService.isAuthenticated(),
-    redirectIfUnauthenticated: (returnUrl = window.location.pathname) => {
-      if (!isAuthenticated) {
-        window.location.href = `/signin?return=${encodeURIComponent(returnUrl)}`;
+    checkAuth: () => ExecutionEnvironment.canUseDOM ? authService.isAuthenticated() : false,
+    redirectIfUnauthenticated: (returnUrl) => {
+      if (ExecutionEnvironment.canUseDOM && !isAuthenticated) {
+        const url = returnUrl || window.location.pathname;
+        window.location.href = `/signin?return=${encodeURIComponent(url)}`;
       }
     },
     redirectIfAuthenticated: (redirectTo = '/') => {
-      if (isAuthenticated) {
+      if (ExecutionEnvironment.canUseDOM && isAuthenticated) {
         window.location.href = redirectTo;
       }
     }
@@ -53,6 +94,10 @@ export const useAuthGuard = () => {
 
 // Function to protect routes programmatically
 export const protectRoute = (nextUrl) => {
+  if (!ExecutionEnvironment.canUseDOM) {
+    return false;
+  }
+
   const isAuthenticated = authService.isAuthenticated();
 
   if (!isAuthenticated) {

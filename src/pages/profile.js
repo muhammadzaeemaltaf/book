@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import Layout from '@theme/Layout';
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import { withAuthGuard } from '../utils/authGuard';
 import BackgroundSurvey from '../components/BackgroundSurvey';
 import authService from '../services/authService';
 
-const ProfilePage = () => {
+const ProfileContent = () => {
   const [profileData, setProfileData] = useState({
     name: '',
     email: '',
@@ -160,4 +162,16 @@ const ProfilePage = () => {
   );
 };
 
-export default withAuthGuard(ProfilePage);
+const AuthenticatedProfileContent = withAuthGuard(ProfileContent);
+
+const ProfilePage = () => {
+  return (
+    <Layout title="Profile" description="User Profile">
+      <BrowserOnly fallback={<div className="container mx-auto px-4 py-8"><div className="flex justify-center items-center h-64"><div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div></div></div>}>
+        {() => <AuthenticatedProfileContent />}
+      </BrowserOnly>
+    </Layout>
+  );
+};
+
+export default ProfilePage;

@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { getApiUrl } from '../config/api';
 import { setCookie, getCookie, deleteCookie } from '../utils/cookies';
 
@@ -65,6 +66,11 @@ export const AuthProvider = ({ children }) => {
   // Check for existing session on app start
   useEffect(() => {
     const initAuth = async () => {
+      if (!ExecutionEnvironment.canUseDOM) {
+        dispatch({ type: 'SET_LOADING', payload: false });
+        return;
+      }
+
       // Try to get token from cookie first, then localStorage
       let token = getCookie('access_token') || localStorage.getItem('access_token');
       let user = getCookie('user') || localStorage.getItem('user');
@@ -100,6 +106,10 @@ export const AuthProvider = ({ children }) => {
 
   // Store user and token in both localStorage and cookies when they change
   useEffect(() => {
+    if (!ExecutionEnvironment.canUseDOM) {
+      return;
+    }
+
     if (state.token) {
       localStorage.setItem('access_token', state.token);
       setCookie('access_token', state.token, 7); // Expires in 7 days

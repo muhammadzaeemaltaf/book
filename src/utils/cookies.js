@@ -1,3 +1,5 @@
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
+
 /**
  * Utility functions for managing cookies
  */
@@ -9,6 +11,9 @@
  * @param {number} days - Number of days until expiration (default: 7)
  */
 export const setCookie = (name, value, days = 7) => {
+  if (!ExecutionEnvironment.canUseDOM) {
+    return;
+  }
   const date = new Date();
   date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
   const expires = `expires=${date.toUTCString()}`;
@@ -21,6 +26,9 @@ export const setCookie = (name, value, days = 7) => {
  * @returns {string|null} Cookie value or null if not found
  */
 export const getCookie = (name) => {
+  if (!ExecutionEnvironment.canUseDOM) {
+    return null;
+  }
   const nameEQ = `${name}=`;
   const cookies = document.cookie.split(';');
   
@@ -41,6 +49,9 @@ export const getCookie = (name) => {
  * @param {string} name - Cookie name
  */
 export const deleteCookie = (name) => {
+  if (!ExecutionEnvironment.canUseDOM) {
+    return;
+  }
   document.cookie = `${name}=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;`;
 };
 

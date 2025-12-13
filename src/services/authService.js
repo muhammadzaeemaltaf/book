@@ -1,3 +1,4 @@
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import { getApiUrl } from '../config/api';
 import { setCookie, getCookie, deleteCookie } from '../utils/cookies';
 
@@ -11,6 +12,9 @@ class AuthService {
 
   // Store authentication data in both localStorage and cookies
   setAuthData(token, user) {
+    if (!ExecutionEnvironment.canUseDOM) {
+      return;
+    }
     if (token) {
       localStorage.setItem(this.tokenKey, token);
       setCookie(this.tokenKey, token, 7); // Expires in 7 days
@@ -24,11 +28,17 @@ class AuthService {
 
   // Get stored token from cookie or localStorage
   getToken() {
+    if (!ExecutionEnvironment.canUseDOM) {
+      return null;
+    }
     return getCookie(this.tokenKey) || localStorage.getItem(this.tokenKey);
   }
 
   // Get stored user from cookie or localStorage
   getUser() {
+    if (!ExecutionEnvironment.canUseDOM) {
+      return null;
+    }
     let userStr = getCookie(this.userKey) || localStorage.getItem(this.userKey);
     if (!userStr) return null;
     
@@ -46,12 +56,18 @@ class AuthService {
 
   // Check if user is authenticated
   isAuthenticated() {
+    if (!ExecutionEnvironment.canUseDOM) {
+      return false;
+    }
     const token = this.getToken();
     return !!token;
   }
 
   // Clear authentication data from both localStorage and cookies
   clearAuthData() {
+    if (!ExecutionEnvironment.canUseDOM) {
+      return;
+    }
     localStorage.removeItem(this.tokenKey);
     localStorage.removeItem(this.userKey);
     deleteCookie(this.tokenKey);
@@ -67,6 +83,9 @@ class AuthService {
 
   // Refresh token if needed (in a real implementation)
   async refreshToken() {
+    if (!ExecutionEnvironment.canUseDOM) {
+      throw new Error('Cannot refresh token during SSR');
+    }
     // In a real implementation, you would call an API endpoint to refresh the token
     // This is a placeholder that would make an actual API call
     try {
