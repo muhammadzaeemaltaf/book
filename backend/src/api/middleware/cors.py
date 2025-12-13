@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
-from ...utils.config import settings
+from src.utils.config import settings
 
 def setup_cors_middleware(app: FastAPI, additional_origins: List[str] = None):
     """

@@ -214,6 +214,8 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 - Static file hosting via GitHub Pages, vector storage for RAG chatbot (Qdrant Cloud) (001-textbook-physical-ai)
 - Python 3.10+ (backend), TypeScript (Docusaurus frontend) + FastAPI (backend), Docusaurus 3.x (frontend), Cohere embed-v4.0 (embeddings), Qdrant Cloud (vector DB), OpenAI Agents SDK (Gemini integration), uv (project management) (002-rag-chatbot)
 - Qdrant Cloud vector database for embeddings, local storage for Docusaurus content (002-rag-chatbot)
+- Python 3.10+ (backend), TypeScript (Docusaurus frontend), JavaScript/TypeScript for Docusaurus customization + BetterAuth (via Context7 MCP), FastAPI, Docusaurus 3.x, Neon Postgres, OpenAI Agent SDK (Gemini), Qdrant Cloud, Zustand/Context API (003-auth-personalization)
+- Neon Postgres (user data, profiles, personalization), Qdrant Cloud (vector DB for embeddings), Local storage for Docusaurus content (003-auth-personalization)
 
 ## Recent Changes
 - 001-textbook-physical-ai: Added Markdown for content, Python 3.10+ for code examples, JavaScript/TypeScript for Docusaurus customization + Docusaurus 3.x, Node.js 18+, ROS 2 Humble, Ubuntu 22.04 LTS, NVIDIA Isaac Sim, Gazebo Garden, OpenAI API (for RAG chatbot)
